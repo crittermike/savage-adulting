@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mcrittenden/Dropbox/Code/adulting/user/config/system.yaml',
-    'modified' => 1491993150,
+    'modified' => 1492114015,
     'data' => [
         'absolute_urls' => false,
         'home' => [

@@ -29,12 +29,12 @@ bing_verify:
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: Featured Posts
-    url: /featured
   - title: Categories
     url: /categories
   - title: About
     url: /about
+  - title: Make A Request
+    url: /request
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

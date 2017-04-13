@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1492112244,
-    'checksum' => '59004e7c2e858f4acdc0b3f4627e6a22',
+    'timestamp' => 1492114087,
+    'checksum' => '53f5cf777ff01401fa55064e87d0b4a6',
     'files' => [
         'user/config' => [
             'security' => [
@@ -11,11 +11,11 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1492112119
+                'modified' => 1492114086
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1491993150
+                'modified' => 1492114015
             ]
         ],
         'system/config' => [
@@ -45,6 +45,10 @@ return [
                 'file' => 'user/plugins/feed/feed.yaml',
                 'modified' => 1491993152
             ],
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1492114015
+            ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/pagination.yaml',
                 'modified' => 1491993152
@@ -69,6 +73,21 @@ return [
                 'description' => 'My Feed Description',
                 'lang' => 'en-us',
                 'length' => 500
+            ],
+            'form' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'files' => [
+                    'multiple' => false,
+                    'limit' => 10,
+                    'filesize' => 5,
+                    'destination' => 'self@',
+                    'avoid_overwriting' => false,
+                    'random_name' => false,
+                    'accept' => [
+                        0 => 'image/*'
+                    ]
+                ]
             ],
             'pagination' => [
                 'enabled' => true,
@@ -378,16 +397,16 @@ return [
             'bing_verify' => NULL,
             'links' => [
                 0 => [
-                    'title' => 'Featured Posts',
-                    'url' => '/featured'
-                ],
-                1 => [
                     'title' => 'Categories',
                     'url' => '/categories'
                 ],
-                2 => [
+                1 => [
                     'title' => 'About',
                     'url' => '/about'
+                ],
+                2 => [
+                    'title' => 'Make A Request',
+                    'url' => '/request'
                 ]
             ],
             'include' => [

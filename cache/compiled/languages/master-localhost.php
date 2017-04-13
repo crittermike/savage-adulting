@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1492110262,
-    'checksum' => '3860e776871c70775343e7b2e4f11565',
+    'timestamp' => 1492114055,
+    'checksum' => '1fb026ae25eb27c3db09cc4461ebb4a1',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -122,6 +122,10 @@ return [
             'plugins/error' => [
                 'file' => 'user/plugins/error/languages.yaml',
                 'modified' => 1491993150
+            ],
+            'plugins/form' => [
+                'file' => 'user/plugins/form/languages.yaml',
+                'modified' => 1492114015
             ]
         ]
     ],
@@ -130,6 +134,43 @@ return [
             'PLUGIN_ERROR' => [
                 'ERROR' => 'Error',
                 'ERROR_MESSAGE' => 'Woops. Looks like this page doesn\'t exist.'
+            ],
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Form not validated. One or more required fields are missing.',
+                'NONCE_NOT_VALIDATED' => 'Oops there was a problem, please check your input and submit the form again.',
+                'FILES' => 'Files Upload',
+                'ALLOW_MULTIPLE' => 'Allow More than one file',
+                'ALLOW_MULTIPLE_HELP' => 'Allows to select more than one file for upload.',
+                'DESTINATION' => 'Destination',
+                'DESTINATION_HELP' => 'The location where the files should be uploaded to',
+                'ACCEPT' => 'Allowed MIME Types',
+                'ACCEPT_HELP' => 'A list of MIME Types that are allowed for upload',
+                'ERROR_VALIDATING_CAPTCHA' => 'Error validating the Captcha',
+                'DATA_SUMMARY' => 'Here is the summary of what you wrote to us:',
+                'NO_FORM_DATA' => 'No form data available',
+                'RECAPTCHA' => 'ReCaptcha',
+                'RECAPTCHA_SITE_KEY' => 'Site key',
+                'RECAPTCHA_SITE_KEY_HELP' => 'For more info visit https://developers.google.com/recaptcha',
+                'RECAPTCHA_SECRET_KEY' => 'Secret key',
+                'RECAPTCHA_SECRET_KEY_HELP' => 'For more info visit https://developers.google.com/recaptcha',
+                'GENERAL' => 'General',
+                'USE_BUILT_IN_CSS' => 'Use built-in CSS',
+                'FILEUPLOAD_PREVENT_SELF' => 'Cannot use "%s" outside of pages.',
+                'FILEUPLOAD_UNABLE_TO_UPLOAD' => 'Unable to upload file %s: %s',
+                'FILEUPLOAD_UNABLE_TO_MOVE' => 'Unable to move file %s to "%s"',
+                'DROPZONE_CANCEL_UPLOAD' => 'Cancel upload',
+                'DROPZONE_CANCEL_UPLOAD_CONFIRMATION' => 'Are you sure you want to cancel this upload?',
+                'DROPZONE_DEFAULT_MESSAGE' => 'Drop your files here or <strong>click in this area</strong>',
+                'DROPZONE_FALLBACK_MESSAGE' => 'Your browser does not support drag and drop file uploads.',
+                'DROPZONE_FALLBACK_TEXT' => 'Please use the fallback form below to upload your files like in the olden days.',
+                'DROPZONE_FILE_TOO_BIG' => 'File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.',
+                'DROPZONE_INVALID_FILE_TYPE' => 'You can\'t upload files of this type.',
+                'DROPZONE_MAX_FILES_EXCEEDED' => 'You can not upload any more files.',
+                'DROPZONE_REMOVE_FILE' => 'Remove file',
+                'DROPZONE_REMOVE_FILE_CONFIRMATION' => 'Are you sure you want to delete this file?',
+                'DROPZONE_RESPONSE_ERROR' => 'Server responded with {{statusCode}} code.',
+                'YES' => 'Yes',
+                'NO' => 'No'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -283,6 +324,18 @@ Path: `%2$s`
                 'ERROR' => 'Fehler',
                 'ERROR_MESSAGE' => 'Uuups. Sieht aus als ob diese Seite nicht existiert.'
             ],
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Formularwerte nicht gültig. Für ein oder mehrere erforderliche Felder fehlen Werte.',
+                'NONCE_NOT_VALIDATED' => 'Ups, es gibt da ein Problem. Eingabewerte bitte noch mal prüfen und das Formular erneut absenden.',
+                'FILES' => 'Dateien hochladen',
+                'ALLOW_MULTIPLE' => 'Erlaube mehr als eine Datei',
+                'ALLOW_MULTIPLE_HELP' => 'Erlaubt es, mehr als eine Datei zum Hochladen auszuwählen.',
+                'DESTINATION' => 'Ziel',
+                'DESTINATION_HELP' => 'Das Ziel, wohin die Dateien hochgeladen werden sollen.',
+                'ACCEPT' => 'Erlaube MIME-Typen',
+                'ACCEPT_HELP' => 'Eine Liste von MIME-Typen, die hochgeladen werden dürfen.',
+                'ERROR_VALIDATING_CAPTCHA' => 'Die Überprüfung des Captcha ist fehlgeschlagen.'
+            ],
             'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
 ---
@@ -384,6 +437,17 @@ Pfad: `%2$s`
                 'ERROR' => 'Greška',
                 'ERROR_MESSAGE' => 'Uups. Izgleda da ova stranica ne postoji.'
             ],
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Formular nije validiran. Jedan ili više traženih polja nedostaju.',
+                'NONCE_NOT_VALIDATED' => 'Ups, došlo je do problema, molimo provjerite svoj unos i pokušajte opet.',
+                'FILES' => 'Upload Fajlova',
+                'ALLOW_MULTIPLE' => 'Dopusti više od jednog fajla',
+                'DESTINATION' => 'Destinacija',
+                'DESTINATION_HELP' => 'Lokacija gdje bi fajlovi trebali biti uploadani',
+                'ACCEPT' => 'Dopušteni MIME Tipovi',
+                'ACCEPT_HELP' => 'Lista dopuštenih MIME Tipova koji su dozvoljeni za upload',
+                'ERROR_VALIDATING_CAPTCHA' => 'Greška pri validiranju Captcha'
+            ],
             'INFLECTOR_UNCOUNTABLE' => [
                 0 => 'oprema',
                 1 => 'informacije',
@@ -469,6 +533,25 @@ Pfad: `%2$s`
             'PLUGIN_ERROR' => [
                 'ERROR' => 'Eroare',
                 'ERROR_MESSAGE' => 'Ooops. Se pare că pagina nu există.'
+            ],
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Formularul nu a fost validat. Unul sau mai multe câmpuri sunt goale.',
+                'NONCE_NOT_VALIDATED' => 'Oops a apărut o problemă, vă rugăm verificați datele introduse și trimiteți formularul din nou.',
+                'FILES' => 'Încărcare fișiere',
+                'ALLOW_MULTIPLE' => 'Permiteți mai multe fișiere',
+                'ALLOW_MULTIPLE_HELP' => 'Vă permite să selectați mai multe fișiere pentru încărcare.',
+                'DESTINATION' => 'Destinație',
+                'DESTINATION_HELP' => 'Locația unde vor fi încărcate fișierele.',
+                'ACCEPT' => 'Permite tipuri MIME ',
+                'ACCEPT_HELP' => 'O listă cu tipuri MIME care sunt permise la încărcare.',
+                'ERROR_VALIDATING_CAPTCHA' => 'Eroare la validarea Captcha.',
+                'DATA_SUMMARY' => 'Mai jos aveți un rezumat al mesajului pe care ni l-ați trimis:',
+                'NO_FORM_DATA' => 'Nu e disponibilă nici o dată pentru formular',
+                'RECAPTCHA' => 'ReCaptcha',
+                'RECAPTCHA_SITE_KEY' => 'Cheia pentru Site',
+                'RECAPTCHA_SITE_KEY_HELP' => 'Pentru mai multe detalii vă rugăm vizitați https://developers.google.com/recaptcha',
+                'RECAPTCHA_SECRET_KEY' => 'Cheia secretă pentru Site',
+                'RECAPTCHA_SECRET_KEY_HELP' => 'Pentru mai multe detalii vă rugăm vizitați  https://developers.google.com/recaptcha'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 Titlu: %1$s
@@ -582,6 +665,41 @@ Calea: `%2$s`
             'PLUGIN_ERROR' => [
                 'ERROR' => 'Erreur',
                 'ERROR_MESSAGE' => 'Oups. Il semble que cette page n’existe pas.'
+            ],
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Formulaire non validé. Un ou plusieurs champs obligatoires sont manquants.',
+                'NONCE_NOT_VALIDATED' => 'Oups, un problème est survenu. Veuillez vérifier votre saisie et soumettre à nouveau le formulaire.',
+                'FILES' => 'Fichiers chargés',
+                'ALLOW_MULTIPLE' => 'Autoriser plus d\'un fichier',
+                'ALLOW_MULTIPLE_HELP' => 'Permet la sélection de plusieurs fichiers pour chargement.',
+                'DESTINATION' => 'Destination',
+                'DESTINATION_HELP' => 'L\'emplacement où les fichiers doivent être chargés.',
+                'ACCEPT' => 'Autoriser les Types MIME',
+                'ACCEPT_HELP' => 'Liste des Types MIME autorisés au chargement',
+                'ERROR_VALIDATING_CAPTCHA' => 'Erreur lors de la validation du Captcha',
+                'DATA_SUMMARY' => 'Voici le résumé de ce que vous nous avez écrit :',
+                'NO_FORM_DATA' => 'Aucune donnée de formulaire disponible',
+                'RECAPTCHA' => 'ReCaptcha',
+                'RECAPTCHA_SITE_KEY' => 'Clé du site',
+                'RECAPTCHA_SITE_KEY_HELP' => 'Pour plus d\'informations veuillez vous rendre sur https://developers.google.com/recaptcha',
+                'RECAPTCHA_SECRET_KEY' => 'Clé secrète',
+                'RECAPTCHA_SECRET_KEY_HELP' => 'Pour plus d\'informations veuillez vous rendre sur https://developers.google.com/recaptcha',
+                'GENERAL' => 'Général',
+                'USE_BUILT_IN_CSS' => 'Utiliser les CSS natifs',
+                'FILEUPLOAD_PREVENT_SELF' => 'Impossible d\'utiliser \'%s\' en dehors des pages.',
+                'FILEUPLOAD_UNABLE_TO_UPLOAD' => 'Impossible de charger le fichier %s: %s',
+                'FILEUPLOAD_UNABLE_TO_MOVE' => 'Impossible de déplacer le fichier %s vers "%s"',
+                'DROPZONE_CANCEL_UPLOAD' => 'Annuler le chargement',
+                'DROPZONE_CANCEL_UPLOAD_CONFIRMATION' => 'Êtes-vous certain de vouloir annuler ce téléchargement ?',
+                'DROPZONE_DEFAULT_MESSAGE' => 'Glissez vos fichiers ici ou <strong>cliquez dans cette zone</strong>',
+                'DROPZONE_FALLBACK_MESSAGE' => 'Votre navigateur ne prend pas en charge les téléchargements par glissé-déposé.',
+                'DROPZONE_FALLBACK_TEXT' => 'Veuillez utiliser le formulaire de secours ci-dessous pour transférer vos fichiers.',
+                'DROPZONE_FILE_TOO_BIG' => 'Le fichier est trop volumineux ({{filesize}}MiB). Taille maximale de fichier : {{maxFilesize}}MiB.',
+                'DROPZONE_INVALID_FILE_TYPE' => 'Vous ne pouvez pas charger des fichiers de ce type.',
+                'DROPZONE_MAX_FILES_EXCEEDED' => 'Vous ne pouvez plus télécharger de fichiers.',
+                'DROPZONE_REMOVE_FILE' => 'Supprimer le fichier',
+                'DROPZONE_REMOVE_FILE_CONFIRMATION' => 'Êtes-vous sûr de vouloir supprimer ce fichier ?',
+                'DROPZONE_RESPONSE_ERROR' => 'Le serveur a répondu avec le code {{statusCode}}.'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -734,6 +852,20 @@ Path: `%2$s`
             'PLUGIN_ERROR' => [
                 'ERROR' => 'Errore',
                 'ERROR_MESSAGE' => 'Ooops. A quanto pare, questa pagina non esiste.'
+            ],
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Il Form risulta invalido. Uno o più campi risultano omessi.',
+                'NONCE_NOT_VALIDATED' => 'Oops è stato riscontrato un errore, si prega di ricontrollare i dati inseriti e provare di nuovo.',
+                'FILES' => 'Invio dei Files',
+                'ALLOW_MULTIPLE' => 'Consenti più di un file',
+                'ALLOW_MULTIPLE_HELP' => 'Permette la selezione di più di un file per l\'upload',
+                'DESTINATION' => 'Destinazione',
+                'DESTINATION_HELP' => 'La destinazione dove i files vengono uploadati',
+                'ACCEPT' => 'Tipi di MIME Concessi',
+                'ACCEPT_HELP' => 'Una lista di tipi di MIME che sono permessi per l\'upload',
+                'ERROR_VALIDATING_CAPTCHA' => 'Errore durante la validazione del Captcha',
+                'YES' => 'Si',
+                'NO' => 'No'
             ],
             'FRONTMATTER_ERROR_PAGE' => '---Titolo: %1$s---# Errore: Frontmatter non valido: \'%2$s\' * *%3$s * * \' \'%4$s \' \'',
             'NICETIME' => [
@@ -980,6 +1112,281 @@ Sti: `%2$s`
             'PLUGIN_ERROR' => [
                 'ERROR' => '错误',
                 'ERROR_MESSAGE' => '呃，似乎这个页面不存在。'
+            ]
+        ],
+        'es' => [
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Falló la validación del formulario. Uno o más campos obligatorios no fueron cubiertos.',
+                'NONCE_NOT_VALIDATED' => 'Oops, hay un problema, por favor revise la información e intente enviar el formulario otra vez.',
+                'FILES' => 'Subida de Ficheros',
+                'ALLOW_MULTIPLE' => 'Permitir más de un fichero',
+                'ALLOW_MULTIPLE_HELP' => 'Permitir seleccionar más de un fichero para subir.',
+                'DESTINATION' => 'Destino',
+                'DESTINATION_HELP' => 'El lugar de destino al que subir los ficheros',
+                'ACCEPT' => 'MIME Types permitidos',
+                'ACCEPT_HELP' => 'Una lista de  MIME Types que se permiten subir.',
+                'ERROR_VALIDATING_CAPTCHA' => 'Error al comrobar el Captcha',
+                'RECAPTCHA' => 'ReCaptcha',
+                'RECAPTCHA_SITE_KEY' => 'Site key',
+                'RECAPTCHA_SITE_KEY_HELP' => 'Para más información visita https://developers.google.com/recaptcha',
+                'RECAPTCHA_SECRET_KEY' => 'Secret key',
+                'RECAPTCHA_SECRET_KEY_HELP' => 'Para más información visita https://developers.google.com/recaptcha'
+            ],
+            'FRONTMATTER_ERROR_PAGE' => '---
+title: %1$s
+---
+
+# Error: Frontmatter Inválido
+
+Ruta: `%2$s`
+
+**%3$s**
+
+```
+%4$s
+```
+',
+            'INFLECTOR_UNCOUNTABLE' => [
+                0 => 'equipo',
+                1 => 'información',
+                3 => 'dinero',
+                5 => 'series',
+                6 => 'pescado',
+                7 => 'oveja'
+            ],
+            'INFLECTOR_IRREGULAR' => [
+                'man' => 'hombres',
+                'child' => 'niños',
+                'sex' => 'sexos'
+            ],
+            'INFLECTOR_ORDINALS' => [
+                'first' => 'ro',
+                'second' => 'do',
+                'third' => 'ro'
+            ],
+            'NICETIME' => [
+                'NO_DATE_PROVIDED' => 'No se proporcionó fecha',
+                'BAD_DATE' => 'Fecha erronea',
+                'AGO' => 'antes',
+                'FROM_NOW' => 'desde ahora',
+                'SECOND' => 'segundo',
+                'MINUTE' => 'minuto',
+                'HOUR' => 'hora',
+                'DAY' => 'día',
+                'WEEK' => 'semana',
+                'MONTH' => 'mes',
+                'YEAR' => 'año',
+                'DECADE' => 'década',
+                'SEC' => 'seg',
+                'MIN' => 'min',
+                'HR' => 'h',
+                'WK' => 'sem',
+                'MO' => 'mes',
+                'YR' => 'año',
+                'DEC' => 'dec',
+                'SECOND_PLURAL' => 'segundos',
+                'MINUTE_PLURAL' => 'minutos',
+                'HOUR_PLURAL' => 'horas',
+                'DAY_PLURAL' => 'días',
+                'WEEK_PLURAL' => 'semanas',
+                'MONTH_PLURAL' => 'meses',
+                'YEAR_PLURAL' => 'años',
+                'DECADE_PLURAL' => 'décadas',
+                'SEC_PLURAL' => 'segs',
+                'MIN_PLURAL' => 'mins',
+                'HR_PLURAL' => 'hs',
+                'WK_PLURAL' => 'sem',
+                'MO_PLURAL' => 'mes',
+                'YR_PLURAL' => 'años',
+                'DEC_PLURAL' => 'décadas'
+            ],
+            'FORM' => [
+                'VALIDATION_FAIL' => '<b>Falló la validación. </b>',
+                'INVALID_INPUT' => 'Dato inválido en: ',
+                'MISSING_REQUIRED_FIELD' => 'Falta el campo requerido: '
+            ],
+            'MONTHS_OF_THE_YEAR' => [
+                0 => 'Enero',
+                1 => 'Febrero',
+                2 => 'Marzo',
+                3 => 'Abril',
+                4 => 'Mayo',
+                5 => 'Junio',
+                6 => 'Julio',
+                7 => 'Agosto',
+                8 => 'Septiembre',
+                9 => 'Octubre',
+                10 => 'Noviembre',
+                11 => 'Diciembre'
+            ],
+            'DAYS_OF_THE_WEEK' => [
+                0 => 'Lunes',
+                1 => 'Martes',
+                2 => 'Miércoles',
+                3 => 'Jueves',
+                4 => 'Viernes',
+                5 => 'Sábado',
+                6 => 'Domingo'
+            ]
+        ],
+        'hu' => [
+            'PLUGIN_FORM' => [
+                'NOT_VALIDATED' => 'Érvénytelen az űrlap. Egy vagy több kötelező mező nincs kitöltve.',
+                'NONCE_NOT_VALIDATED' => 'Upsz, van egy kis probléma, kérlek nézd át az űrlapot, majd küldd el újra.',
+                'FILES' => 'Fájlok Feltöltése',
+                'ALLOW_MULTIPLE' => 'Több fájl feltöltése',
+                'ALLOW_MULTIPLE_HELP' => 'Engedélyezi egyszerre több állomány feltöltését.',
+                'DESTINATION' => 'Feltöltés Helye',
+                'DESTINATION_HELP' => 'Ide lesznek feltöltve az állományok',
+                'ACCEPT' => 'Engedélyezett MIME-típusok',
+                'ACCEPT_HELP' => 'A feltölthető állományok MIME-típusainak listája',
+                'ERROR_VALIDATING_CAPTCHA' => 'Hiba lépett fel a Captcha validálása során'
+            ],
+            'FRONTMATTER_ERROR_PAGE' => '---
+cím: %1$s
+---
+
+# Hiba: Érvénytelen Frontmatter
+
+Elérési út: `%2$s`
+
+**%3$s**
+
+```
+%4$s
+```
+',
+            'INFLECTOR_PLURALS' => [
+                '/(quiz)$/i' => '\\1zes',
+                '/^(ox)$/i' => '\\1en',
+                '/([m|l])ouse$/i' => '\\1ice',
+                '/(matr|vert|ind)ix|ex$/i' => '\\1ices',
+                '/(x|ch|ss|sh)$/i' => '\\1es',
+                '/([^aeiouy]|qu)ies$/i' => '\\1y',
+                '/([^aeiouy]|qu)y$/i' => '\\1ies',
+                '/(hive)$/i' => '\\1s',
+                '/(?:([^f])fe|([lr])f)$/i' => '\\1\\2ves',
+                '/sis$/i' => 'ses',
+                '/([ti])um$/i' => '\\1a',
+                '/(buffal|tomat)o$/i' => '\\1oes',
+                '/(bu)s$/i' => '\\1ses',
+                '/(alias|status)/i' => '\\1es',
+                '/(octop|vir)us$/i' => '\\1i',
+                '/(ax|test)is$/i' => '\\1es',
+                '/s$/i' => 's',
+                '/$/' => 's'
+            ],
+            'INFLECTOR_SINGULAR' => [
+                '/(quiz)zes$/i' => '\\1',
+                '/(matr)ices$/i' => '\\1ix',
+                '/(vert|ind)ices$/i' => '\\1ex',
+                '/^(ox)en/i' => '\\1',
+                '/(alias|status)es$/i' => '\\1',
+                '/([octop|vir])i$/i' => '\\1us',
+                '/(cris|ax|test)es$/i' => '\\1is',
+                '/(shoe)s$/i' => '\\1',
+                '/(o)es$/i' => '\\1',
+                '/(bus)es$/i' => '\\1',
+                '/([m|l])ice$/i' => '\\1ouse',
+                '/(x|ch|ss|sh)es$/i' => '\\1',
+                '/(m)ovies$/i' => '\\1ovie',
+                '/(s)eries$/i' => '\\1eries',
+                '/([^aeiouy]|qu)ies$/i' => '\\1y',
+                '/([lr])ves$/i' => '\\1f',
+                '/(tive)s$/i' => '\\1',
+                '/(hive)s$/i' => '\\1',
+                '/([^f])ves$/i' => '\\1fe',
+                '/(^analy)ses$/i' => '\\1sis',
+                '/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$/i' => '\\1\\2sis',
+                '/([ti])a$/i' => '\\1um',
+                '/(n)ews$/i' => '\\1ews'
+            ],
+            'INFLECTOR_UNCOUNTABLE' => [
+                0 => 'felszerelés',
+                1 => 'információ',
+                2 => 'rizs',
+                3 => 'pénz',
+                4 => 'fajok',
+                5 => 'sorozat',
+                6 => 'hal',
+                7 => 'juh'
+            ],
+            'INFLECTOR_IRREGULAR' => [
+                'person' => 'személyek',
+                'man' => 'férfiak',
+                'child' => 'gyerekek',
+                'sex' => 'nemek',
+                'move' => 'lépések'
+            ],
+            'INFLECTOR_ORDINALS' => [
+                'default' => '.',
+                'first' => '.',
+                'second' => '.',
+                'third' => '.'
+            ],
+            'NICETIME' => [
+                'NO_DATE_PROVIDED' => 'Nincs dátum megadva',
+                'BAD_DATE' => 'Hibás dátum',
+                'AGO' => 'elteltével',
+                'FROM_NOW' => 'mostantól',
+                'SECOND' => 'másodperc',
+                'MINUTE' => 'perc',
+                'HOUR' => 'óra',
+                'DAY' => 'nap',
+                'WEEK' => 'hét',
+                'MONTH' => 'hónap',
+                'YEAR' => 'év',
+                'DECADE' => 'évtized',
+                'SEC' => 'mp',
+                'MIN' => 'p',
+                'HR' => 'ó',
+                'WK' => 'hét',
+                'MO' => 'hó',
+                'YR' => 'év',
+                'DEC' => 'évt',
+                'SECOND_PLURAL' => 'másodperc',
+                'MINUTE_PLURAL' => 'perc',
+                'HOUR_PLURAL' => 'óra',
+                'DAY_PLURAL' => 'nap',
+                'WEEK_PLURAL' => 'hét',
+                'MONTH_PLURAL' => 'hónap',
+                'YEAR_PLURAL' => 'év',
+                'DECADE_PLURAL' => 'évtized',
+                'SEC_PLURAL' => 'mp',
+                'MIN_PLURAL' => 'perc',
+                'HR_PLURAL' => 'ó',
+                'WK_PLURAL' => 'hét',
+                'MO_PLURAL' => 'hó',
+                'YR_PLURAL' => 'év',
+                'DEC_PLURAL' => 'évt'
+            ],
+            'FORM' => [
+                'VALIDATION_FAIL' => '<b>A validáció hibát talált:</b>',
+                'INVALID_INPUT' => 'Az itt megadott érték érvénytelen:',
+                'MISSING_REQUIRED_FIELD' => 'Ez a kötelező mező nincs kitöltve:'
+            ],
+            'MONTHS_OF_THE_YEAR' => [
+                0 => 'január',
+                1 => 'február',
+                2 => 'március',
+                3 => 'április',
+                4 => 'május',
+                5 => 'június',
+                6 => 'július',
+                7 => 'augusztus',
+                8 => 'szeptember',
+                9 => 'október',
+                10 => 'november',
+                11 => 'december'
+            ],
+            'DAYS_OF_THE_WEEK' => [
+                0 => 'hétfő',
+                1 => 'kedd',
+                2 => 'szerda',
+                3 => 'csütörtök',
+                4 => 'péntek',
+                5 => 'szombat',
+                6 => 'vasárnap'
             ]
         ],
         'ar' => [
@@ -1256,104 +1663,6 @@ Ruta: `%2$s`
                 6 => 'Κυριακή'
             ]
         ],
-        'es' => [
-            'FRONTMATTER_ERROR_PAGE' => '---
-title: %1$s
----
-
-# Error: Frontmatter Inválido
-
-Ruta: `%2$s`
-
-**%3$s**
-
-```
-%4$s
-```
-',
-            'INFLECTOR_UNCOUNTABLE' => [
-                0 => 'equipo',
-                1 => 'información',
-                3 => 'dinero',
-                5 => 'series',
-                6 => 'pescado',
-                7 => 'oveja'
-            ],
-            'INFLECTOR_IRREGULAR' => [
-                'man' => 'hombres',
-                'child' => 'niños',
-                'sex' => 'sexos'
-            ],
-            'INFLECTOR_ORDINALS' => [
-                'first' => 'ro',
-                'second' => 'do',
-                'third' => 'ro'
-            ],
-            'NICETIME' => [
-                'NO_DATE_PROVIDED' => 'No se proporcionó fecha',
-                'BAD_DATE' => 'Fecha erronea',
-                'AGO' => 'antes',
-                'FROM_NOW' => 'desde ahora',
-                'SECOND' => 'segundo',
-                'MINUTE' => 'minuto',
-                'HOUR' => 'hora',
-                'DAY' => 'día',
-                'WEEK' => 'semana',
-                'MONTH' => 'mes',
-                'YEAR' => 'año',
-                'DECADE' => 'década',
-                'SEC' => 'seg',
-                'MIN' => 'min',
-                'HR' => 'h',
-                'WK' => 'sem',
-                'MO' => 'mes',
-                'YR' => 'año',
-                'DEC' => 'dec',
-                'SECOND_PLURAL' => 'segundos',
-                'MINUTE_PLURAL' => 'minutos',
-                'HOUR_PLURAL' => 'horas',
-                'DAY_PLURAL' => 'días',
-                'WEEK_PLURAL' => 'semanas',
-                'MONTH_PLURAL' => 'meses',
-                'YEAR_PLURAL' => 'años',
-                'DECADE_PLURAL' => 'décadas',
-                'SEC_PLURAL' => 'segs',
-                'MIN_PLURAL' => 'mins',
-                'HR_PLURAL' => 'hs',
-                'WK_PLURAL' => 'sem',
-                'MO_PLURAL' => 'mes',
-                'YR_PLURAL' => 'años',
-                'DEC_PLURAL' => 'décadas'
-            ],
-            'FORM' => [
-                'VALIDATION_FAIL' => '<b>Falló la validación. </b>',
-                'INVALID_INPUT' => 'Dato inválido en: ',
-                'MISSING_REQUIRED_FIELD' => 'Falta el campo requerido: '
-            ],
-            'MONTHS_OF_THE_YEAR' => [
-                0 => 'Enero',
-                1 => 'Febrero',
-                2 => 'Marzo',
-                3 => 'Abril',
-                4 => 'Mayo',
-                5 => 'Junio',
-                6 => 'Julio',
-                7 => 'Agosto',
-                8 => 'Septiembre',
-                9 => 'Octubre',
-                10 => 'Noviembre',
-                11 => 'Diciembre'
-            ],
-            'DAYS_OF_THE_WEEK' => [
-                0 => 'Lunes',
-                1 => 'Martes',
-                2 => 'Miércoles',
-                3 => 'Jueves',
-                4 => 'Viernes',
-                5 => 'Sábado',
-                6 => 'Domingo'
-            ]
-        ],
         'fi' => [
             'NICETIME' => [
                 'NO_DATE_PROVIDED' => 'Päivämäärää ei annettu',
@@ -1417,154 +1726,6 @@ Ruta: `%2$s`
                 4 => 'Perjantai',
                 5 => 'Lauantai',
                 6 => 'Sunnuntai'
-            ]
-        ],
-        'hu' => [
-            'FRONTMATTER_ERROR_PAGE' => '---
-cím: %1$s
----
-
-# Hiba: Érvénytelen Frontmatter
-
-Elérési út: `%2$s`
-
-**%3$s**
-
-```
-%4$s
-```
-',
-            'INFLECTOR_PLURALS' => [
-                '/(quiz)$/i' => '\\1zes',
-                '/^(ox)$/i' => '\\1en',
-                '/([m|l])ouse$/i' => '\\1ice',
-                '/(matr|vert|ind)ix|ex$/i' => '\\1ices',
-                '/(x|ch|ss|sh)$/i' => '\\1es',
-                '/([^aeiouy]|qu)ies$/i' => '\\1y',
-                '/([^aeiouy]|qu)y$/i' => '\\1ies',
-                '/(hive)$/i' => '\\1s',
-                '/(?:([^f])fe|([lr])f)$/i' => '\\1\\2ves',
-                '/sis$/i' => 'ses',
-                '/([ti])um$/i' => '\\1a',
-                '/(buffal|tomat)o$/i' => '\\1oes',
-                '/(bu)s$/i' => '\\1ses',
-                '/(alias|status)/i' => '\\1es',
-                '/(octop|vir)us$/i' => '\\1i',
-                '/(ax|test)is$/i' => '\\1es',
-                '/s$/i' => 's',
-                '/$/' => 's'
-            ],
-            'INFLECTOR_SINGULAR' => [
-                '/(quiz)zes$/i' => '\\1',
-                '/(matr)ices$/i' => '\\1ix',
-                '/(vert|ind)ices$/i' => '\\1ex',
-                '/^(ox)en/i' => '\\1',
-                '/(alias|status)es$/i' => '\\1',
-                '/([octop|vir])i$/i' => '\\1us',
-                '/(cris|ax|test)es$/i' => '\\1is',
-                '/(shoe)s$/i' => '\\1',
-                '/(o)es$/i' => '\\1',
-                '/(bus)es$/i' => '\\1',
-                '/([m|l])ice$/i' => '\\1ouse',
-                '/(x|ch|ss|sh)es$/i' => '\\1',
-                '/(m)ovies$/i' => '\\1ovie',
-                '/(s)eries$/i' => '\\1eries',
-                '/([^aeiouy]|qu)ies$/i' => '\\1y',
-                '/([lr])ves$/i' => '\\1f',
-                '/(tive)s$/i' => '\\1',
-                '/(hive)s$/i' => '\\1',
-                '/([^f])ves$/i' => '\\1fe',
-                '/(^analy)ses$/i' => '\\1sis',
-                '/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$/i' => '\\1\\2sis',
-                '/([ti])a$/i' => '\\1um',
-                '/(n)ews$/i' => '\\1ews'
-            ],
-            'INFLECTOR_UNCOUNTABLE' => [
-                0 => 'felszerelés',
-                1 => 'információ',
-                2 => 'rizs',
-                3 => 'pénz',
-                4 => 'fajok',
-                5 => 'sorozat',
-                6 => 'hal',
-                7 => 'juh'
-            ],
-            'INFLECTOR_IRREGULAR' => [
-                'person' => 'személyek',
-                'man' => 'férfiak',
-                'child' => 'gyerekek',
-                'sex' => 'nemek',
-                'move' => 'lépések'
-            ],
-            'INFLECTOR_ORDINALS' => [
-                'default' => '.',
-                'first' => '.',
-                'second' => '.',
-                'third' => '.'
-            ],
-            'NICETIME' => [
-                'NO_DATE_PROVIDED' => 'Nincs dátum megadva',
-                'BAD_DATE' => 'Hibás dátum',
-                'AGO' => 'elteltével',
-                'FROM_NOW' => 'mostantól',
-                'SECOND' => 'másodperc',
-                'MINUTE' => 'perc',
-                'HOUR' => 'óra',
-                'DAY' => 'nap',
-                'WEEK' => 'hét',
-                'MONTH' => 'hónap',
-                'YEAR' => 'év',
-                'DECADE' => 'évtized',
-                'SEC' => 'mp',
-                'MIN' => 'p',
-                'HR' => 'ó',
-                'WK' => 'hét',
-                'MO' => 'hó',
-                'YR' => 'év',
-                'DEC' => 'évt',
-                'SECOND_PLURAL' => 'másodperc',
-                'MINUTE_PLURAL' => 'perc',
-                'HOUR_PLURAL' => 'óra',
-                'DAY_PLURAL' => 'nap',
-                'WEEK_PLURAL' => 'hét',
-                'MONTH_PLURAL' => 'hónap',
-                'YEAR_PLURAL' => 'év',
-                'DECADE_PLURAL' => 'évtized',
-                'SEC_PLURAL' => 'mp',
-                'MIN_PLURAL' => 'perc',
-                'HR_PLURAL' => 'ó',
-                'WK_PLURAL' => 'hét',
-                'MO_PLURAL' => 'hó',
-                'YR_PLURAL' => 'év',
-                'DEC_PLURAL' => 'évt'
-            ],
-            'FORM' => [
-                'VALIDATION_FAIL' => '<b>A validáció hibát talált:</b>',
-                'INVALID_INPUT' => 'Az itt megadott érték érvénytelen:',
-                'MISSING_REQUIRED_FIELD' => 'Ez a kötelező mező nincs kitöltve:'
-            ],
-            'MONTHS_OF_THE_YEAR' => [
-                0 => 'január',
-                1 => 'február',
-                2 => 'március',
-                3 => 'április',
-                4 => 'május',
-                5 => 'június',
-                6 => 'július',
-                7 => 'augusztus',
-                8 => 'szeptember',
-                9 => 'október',
-                10 => 'november',
-                11 => 'december'
-            ],
-            'DAYS_OF_THE_WEEK' => [
-                0 => 'hétfő',
-                1 => 'kedd',
-                2 => 'szerda',
-                3 => 'csütörtök',
-                4 => 'péntek',
-                5 => 'szombat',
-                6 => 'vasárnap'
             ]
         ],
         'ja' => [
@@ -2521,6 +2682,6 @@ Path: `%2$s`
                 6 => 'Chủ Nhật'
             ]
         ],
-        'checksum' => '3860e776871c70775343e7b2e4f11565'
+        'checksum' => '1fb026ae25eb27c3db09cc4461ebb4a1'
     ]
 ];

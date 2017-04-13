@@ -114,75 +114,78 @@ class __TwigTemplate_c76637ab93966991644f6c874d9fcb8226896881a65042045a67853ae2d
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/postb146.css"), "method");
         // line 31
         echo "    ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/vendor/modernizrb146.js"), "method");
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/custom.css"), "method");
         // line 32
+        echo "    ";
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/vendor/modernizrb146.js"), "method");
+        // line 33
         echo "
 
     ";
-        // line 34
+        // line 35
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "css", array(), "method");
         echo "
 
     <!-- Icons -->
     <!-- 16x16 -->
     <link rel=\"shortcut icon\" href=\"";
-        // line 38
+        // line 39
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/favicon.ico\">
     <!-- 32x32 -->
     <link rel=\"shortcut icon\" href=\"";
-        // line 40
+        // line 41
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/logo.png\">
     <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
     <link rel=\"apple-touch-icon-precomposed\" href=\"";
-        // line 42
+        // line 43
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/apple-touch-icon-precomposed.png\">
     <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
     <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"";
-        // line 44
+        // line 45
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/apple-touch-icon-72x72-precomposed.png\">
     <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
     <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"";
-        // line 46
+        // line 47
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/apple-touch-icon-114x114-precomposed.png\">
     <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
     <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"";
-        // line 48
+        // line 49
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/apple-touch-icon-144x144-precomposed.png\">
 </head>
 ";
-        // line 50
+        // line 51
         $this->displayBlock('body', $context, $blocks);
-        // line 53
+        // line 54
         echo "    ";
         $context["home"] = $this->getAttribute((isset($context["pages"]) ? $context["pages"] : null), "find", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "system", array()), "home", array()), "alias", array())), "method");
-        // line 54
+        // line 55
         echo "        ";
         $this->displayBlock('header', $context, $blocks);
-        // line 72
-        echo "
-        ";
         // line 73
+        echo "
+        ";
+        // line 74
         $this->displayBlock('content', $context, $blocks);
-        // line 76
-        echo "
-        ";
         // line 77
-        $this->displayBlock('footer', $context, $blocks);
-        // line 80
         echo "
         ";
+        // line 78
+        $this->displayBlock('footer', $context, $blocks);
         // line 81
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
+        echo "
+        ";
         // line 82
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
+        // line 83
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/summerb146.js"), "method");
-        // line 83
+        // line 84
         echo "        ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "
@@ -192,31 +195,31 @@ class __TwigTemplate_c76637ab93966991644f6c874d9fcb8226896881a65042045a67853ae2d
 ";
     }
 
-    // line 50
+    // line 51
     public function block_body($context, array $blocks = array())
     {
-        // line 51
+        // line 52
         echo "    <body class=\"home-template\" itemscope itemtype=\"http://schema.org/WebPage\">
     ";
     }
 
-    // line 54
+    // line 55
     public function block_header($context, array $blocks = array())
     {
-        // line 55
+        // line 56
         echo "            <header class=\"summer-site-head\">
                 <div class=\"summer-site-head-menu\">
                     <a class=\"summer-blog-logo\" href=\"";
-        // line 57
+        // line 58
         echo ((((isset($context["base_url"]) ? $context["base_url"] : null) == "")) ? ("/") : ((isset($context["base_url"]) ? $context["base_url"] : null)));
         echo "\"><img src=\"";
         echo (isset($context["base_url_relative"]) ? $context["base_url_relative"] : null);
         echo $this->getAttribute((isset($context["site"]) ? $context["site"] : null), "logo", array());
         echo "\" alt=\"Blog Logo\" /></a>
                     ";
-        // line 58
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 58)->display($context);
         // line 59
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 59)->display($context);
+        // line 60
         echo "                    <div class=\"clearfix\"></div>
                 </div>
                 <div class=\"summer-site-head-content\" >
@@ -224,13 +227,13 @@ class __TwigTemplate_c76637ab93966991644f6c874d9fcb8226896881a65042045a67853ae2d
                     <h1 class=\"summer-blog-title\">
                         <span class=\"summer-site-head-title-bg\">
                             ";
-        // line 65
+        // line 66
         echo $this->getAttribute((isset($context["site"]) ? $context["site"] : null), "title", array());
         echo "
                         </span>
                     </h1>
                     <h2 class=\"summer-blog-description\">";
-        // line 68
+        // line 69
         echo $this->getAttribute((isset($context["site"]) ? $context["site"] : null), "description", array());
         echo "</h2>
                 </div>
@@ -238,23 +241,23 @@ class __TwigTemplate_c76637ab93966991644f6c874d9fcb8226896881a65042045a67853ae2d
         ";
     }
 
-    // line 73
+    // line 74
     public function block_content($context, array $blocks = array())
     {
-        // line 74
+        // line 75
         echo "            ";
         echo (isset($context["content"]) ? $context["content"] : null);
         echo "
         ";
     }
 
-    // line 77
+    // line 78
     public function block_footer($context, array $blocks = array())
     {
-        // line 78
-        echo "            ";
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 78)->display($context);
         // line 79
+        echo "            ";
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 79)->display($context);
+        // line 80
         echo "        ";
     }
 
@@ -270,7 +273,7 @@ class __TwigTemplate_c76637ab93966991644f6c874d9fcb8226896881a65042045a67853ae2d
 
     public function getDebugInfo()
     {
-        return array (  258 => 79,  255 => 78,  252 => 77,  245 => 74,  242 => 73,  234 => 68,  228 => 65,  220 => 59,  218 => 58,  211 => 57,  207 => 55,  204 => 54,  199 => 51,  196 => 50,  186 => 83,  183 => 82,  181 => 81,  178 => 80,  176 => 77,  173 => 76,  171 => 73,  168 => 72,  165 => 54,  162 => 53,  160 => 50,  155 => 48,  150 => 46,  145 => 44,  140 => 42,  135 => 40,  130 => 38,  123 => 34,  119 => 32,  116 => 31,  113 => 30,  110 => 29,  107 => 28,  104 => 27,  102 => 26,  95 => 22,  92 => 21,  59 => 19,  55 => 18,  45 => 11,  37 => 10,  26 => 2,  23 => 1,);
+        return array (  261 => 80,  258 => 79,  255 => 78,  248 => 75,  245 => 74,  237 => 69,  231 => 66,  223 => 60,  221 => 59,  214 => 58,  210 => 56,  207 => 55,  202 => 52,  199 => 51,  189 => 84,  186 => 83,  184 => 82,  181 => 81,  179 => 78,  176 => 77,  174 => 74,  171 => 73,  168 => 55,  165 => 54,  163 => 51,  158 => 49,  153 => 47,  148 => 45,  143 => 43,  138 => 41,  133 => 39,  126 => 35,  122 => 33,  119 => 32,  116 => 31,  113 => 30,  110 => 29,  107 => 28,  104 => 27,  102 => 26,  95 => 22,  92 => 21,  59 => 19,  55 => 18,  45 => 11,  37 => 10,  26 => 2,  23 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -313,6 +316,7 @@ class __TwigTemplate_c76637ab93966991644f6c874d9fcb8226896881a65042045a67853ae2d
     {% do assets.addCss('theme://css/vendor/foundation.minb146.css') %}
     {% do assets.addCss('theme://css/styleb146.css') %}
     {% do assets.addCss('theme://css/postb146.css') %}
+    {% do assets.addCss('theme://css/custom.css') %}
     {% do assets.addJs('theme://js/vendor/modernizrb146.js') %}
 
 

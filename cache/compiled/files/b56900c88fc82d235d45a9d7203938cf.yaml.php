@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mcrittenden/Dropbox/Code/adulting/user/config/site.yaml',
-    'modified' => 1492112119,
+    'modified' => 1492114086,
     'data' => [
         'title' => 'Savage Adulting',
         'description' => 'The hardcore guide to growing up, you moron',
@@ -31,16 +31,16 @@ return [
         'bing_verify' => NULL,
         'links' => [
             0 => [
-                'title' => 'Featured Posts',
-                'url' => '/featured'
-            ],
-            1 => [
                 'title' => 'Categories',
                 'url' => '/categories'
             ],
-            2 => [
+            1 => [
                 'title' => 'About',
                 'url' => '/about'
+            ],
+            2 => [
+                'title' => 'Make A Request',
+                'url' => '/request'
             ]
         ],
         'include' => [
