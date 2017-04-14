@@ -23,3 +23,12 @@ button.button {
   background: #e51843;
   margin-top: 40px;
 }
+
+.summer-blog-description {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
+
+.summer-post-title h1 {
+  max-width: 15em;
+}

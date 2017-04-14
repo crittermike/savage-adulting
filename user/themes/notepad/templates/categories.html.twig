@@ -32,7 +32,7 @@
 
             {% for tag, items in tags %}
               <article>
-                <h2 id="{{ tag }}">{{ tag }}</h2>
+                <h2 id="{{ tag }}">{{ tag | title }}</h2>
                 <ul class="post-list">
                   {% for path, slug in items %}
                     {% set post = grav['pages'].get(path) %}
