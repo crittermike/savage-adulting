@@ -2,9 +2,7 @@
 <html lang="{{ grav.language.getLanguage ?: 'en' }}">
 <head>
     <meta charset="utf-8">
-    <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -30,22 +28,13 @@
     {% do assets.addCss('theme://css/postb146.css') %}
     {% do assets.addCss('theme://css/custom.css') %}
     {% do assets.addJs('theme://js/vendor/modernizrb146.js') %}
-
-
     {{ assets.css() }}
 
-    <!-- Icons -->
-    <!-- 16x16 -->
     <link rel="shortcut icon" href="{{ theme_url }}/images/favicon.ico">
-    <!-- 32x32 -->
     <link rel="shortcut icon" href="{{ theme_url }}/images/logo.png">
-    <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
     <link rel="apple-touch-icon-precomposed" href="{{ theme_url }}/images/apple-touch-icon-precomposed.png">
-    <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ theme_url }}/images/apple-touch-icon-72x72-precomposed.png">
-    <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ theme_url }}/images/apple-touch-icon-114x114-precomposed.png">
-    <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ theme_url }}/images/apple-touch-icon-144x144-precomposed.png">
 </head>
 {% block body %}
@@ -84,4 +73,4 @@
         {{ assets.js() }}
 
     </body>
-    </html>
+</html>
