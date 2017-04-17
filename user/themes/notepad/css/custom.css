@@ -31,4 +31,35 @@ button.button {
 
 .summer-post-title h1 {
   max-width: 15em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-form article p {
+  text-align: center;
+}
+
+.page-form .alert.green p {
+  background: #e51843;
+  padding: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.search-wrapper .search-input {
+  width: 100%;
+  padding: 30px 15px;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 90px;
+}
+
+.search-template .summer-site-head-content {
+  display: none;
+}
+
+.search-template .summer-post-title h1 {
+  font-size: 4.375rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }

@@ -28,7 +28,7 @@ links:
     url: /search
   - title: About
     url: /about
-  - title: Make A Request
+  - title: Request
     url: /request
 
 include: [".htaccess"]

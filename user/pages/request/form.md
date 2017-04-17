@@ -1,10 +1,10 @@
 ---
-title: Yay! Another idiotic request!
+title: Yay! Another request!
 form:
     name: contact-form
     fields:
         - name: name
-          label: Sigh, what's your name
+          label: What's your name?
           autofocus: on
           autocomplete: on
           type: text
@@ -12,20 +12,21 @@ form:
             required: true
 
         - name: email
-          label: Enter your stupid email address
+          label: What's your email address?
           type: email
           validate:
             required: true
 
         - name: request
-          label: Now type the idiotic topic you have in mind
+          label: Now type something here.
           type: textarea
+          rows: 5
           validate:
             required: true
 
     buttons:
         - type: submit
-          value: Just click the button already
+          value: Then click this big button
 
     process:
         - email:
