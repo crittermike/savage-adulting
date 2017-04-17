@@ -1,0 +1,11 @@
+email: mikecrittenden@gmail.com
+fullname: 'Mike Crittenden'
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$oxk8vW1vHgkC8PNvBEgVfeGz4kCKL/cdPgHZ5OEHjWRp8JZA2sNMi

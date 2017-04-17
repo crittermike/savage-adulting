@@ -20,17 +20,12 @@ owner:
 
 logo: /user/themes/notepad/images/logo.png
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
-
-# Links to include in footer navigation
 # For external links add external: true
 links:
   - title: Categories
     url: /categories
+  - title: Search
+    url: /search
   - title: About
     url: /about
   - title: Make A Request
