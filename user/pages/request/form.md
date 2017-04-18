@@ -32,7 +32,7 @@ form:
         - email:
             from: "{{ config.plugins.email.from }}"
             to: "{{ config.plugins.email.to }}"
-            subject: "[Feedback] {{ form.value.name|e }}"
+            subject: "Savage Adulting request from {{ form.value.name|e }}"
             body: "{% include 'forms/data.html.twig' %}"
         - save:
             fileprefix: feedback-
