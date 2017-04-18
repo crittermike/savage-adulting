@@ -1,0 +1,27 @@
+name: Savage
+version: 0.1.0
+description: The theme for SavageAdulting.com
+icon: rebel
+author:
+  name: Mike Crittenden
+  email: mikecrittenden@gmail.com
+homepage: https://github.com/mike-crittenden/grav-theme-savage
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/mike-crittenden/grav-theme-savage/issues
+readme: https://github.com/mike-crittenden/grav-theme-savage/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
