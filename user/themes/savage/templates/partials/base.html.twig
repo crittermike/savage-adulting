@@ -11,59 +11,78 @@
     {% include 'partials/metadata.html.twig' %}
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    <link rel="shortcut icon" href="{{ url('theme://images/favicon.ico') }}">
     <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <link rel="apple-touch-icon-precomposed" href="{{ theme_url }}/images/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ theme_url }}/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ theme_url }}/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ theme_url }}/images/apple-touch-icon-144x144-precomposed.png">
 
     {% block stylesheets %}
-        {% do assets.addCss('http://yui.yahooapis.com/pure/0.6.0/pure-min.css', 100) %}
-        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 99) %}
-        {% do assets.addCss('theme://css/custom.css', 98) %}
+        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') %}
+        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') %}
+        {% do assets.addCss('http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,latin-ext') %}
+        {% do assets.addCss('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&amp;subset=latin,latin-ext') %}
+        {% do assets.addCss('theme://css/custom.css') %}
     {% endblock %}
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
+        {% do assets.addJs('jquery') %}
+        {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js') %}
+        {% do assets.addJs('theme://js/custom.js') %}
     {% endblock %}
     {{ assets.js() }}
 
 {% endblock head%}
 </head>
+
 <body id="top" class="{{ page.header.body_classes }}">
 
-{% block header %}
-    <div class="header">
-        <div class="wrapper padding">
-            <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
-                <i class="fa fa-rebel"></i>
-                {{ config.site.title }}
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-6322775-26', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    {% block header %}
+        {% block header_navigation %}
+        <nav class="main-nav">
+            {% include 'partials/navigation.html.twig' %}
+        </nav>
+        {% endblock %}
+    {% endblock %}
+
+    {% if block('banner') is not empty %}
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    {% block banner %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% block body %}
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            {% block footer %}
+                <p>Copyright &copy; {{ now|date('Y') }} Savage Adulting</p>
             {% endblock %}
         </div>
-    </div>
-{% endblock %}
+    </footer>
 
-{% block body %}
-    <section id="body">
-        <div class="wrapper padding">
-        {% block content %}{% endblock %}
-        </div>
-    </section>
-{% endblock %}
-
-{% block footer %}
-    <div class="footer text-center">
-        <div class="wrapper padding">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
-        </div>
-    </div>
-{% endblock %}
-
-{% block bottom %}
-    {{ assets.js('bottom') }}
-{% endblock %}
+    {% block bottom %}
+        {{ assets.js('bottom') }}
+    {% endblock %}
 
 </body>
 </html>

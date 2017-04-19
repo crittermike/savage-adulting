@@ -1,175 +1,87 @@
-/* Core Stuff */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 body {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #606d6e;
-}
+  font-family: "Open Sans", sans-serif; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #454B4D;
-}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold; }
 
-a {
-    color: #1F8CD6;
-    text-decoration: none;
-}
+span.label {
+  background: #e51843; }
+  span.label a {
+    color: white; }
 
-a:hover {
-    color: #175E91;
-}
+.navbar {
+  background: black;
+  border: none;
+  margin-bottom: 0; }
 
-pre {
-    background: #F0F0F0;
-    margin: 1rem 0;
-    border-radius: 2px;
-}
+.navbar__links {
+  margin-right: 10px;
+  margin-top: 20px; }
+  .in .navbar__links, .collapsing .navbar__links {
+    margin-top: 0; }
 
-blockquote {
-    border-left: 10px solid #eee;
-    margin: 0;
-    padding: 0 2rem;
-}
+.navbar-inverse .nav .navbar__link {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+  .navbar-inverse .nav .navbar__link:hover {
+    color: black;
+    background: white; }
 
-/* Utility Classes */
-.wrapper {
-    margin: 0 3rem;
-}
+.navbar__toggle {
+  margin-top: 25px;
+  margin-right: 30px; }
 
-.padding {
-    padding: 3rem 1rem;
-}
+.navbar__logo {
+  max-height: 80px; }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-left {
-    text-align: left;
-}
-
-/* Content Styling */
-.header .padding {
-    padding: 1rem 0;
-}
-
-.header {
-    background-color: #1F8DD6;
-    color: #eee;
-}
-
-.header a {
-    color: #fff;
-}
-
-.header .logo {
-    font-size: 1.7rem;
+.banner {
+  text-align: center;
+  background: black;
+  padding: 130px 0;
+  margin-bottom: 50px; }
+  .banner h1 {
+    background: #e51843;
     text-transform: uppercase;
-}
-
-.footer {
-    background-color: #eee;
-}
-
-/* Menu Settings */
-.main-nav ul {
-    text-align: center;
-    letter-spacing: -1em;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav ul li {
+    font-size: 20px;
     display: inline-block;
-    letter-spacing: normal;
-}
+    color: white;
+    padding: 10px 15px; }
+  .banner h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: bold; }
 
-.main-nav ul li a {
-    position: relative;
-    display: block;
-    line-height: 45px;
-    color: #fff;
-    padding: 0 20px;
-    white-space: nowrap;
-}
+.teaser {
+  padding: 75px 0;
+  border-bottom: 1px solid #eee; }
 
-.main-nav > ul > li > a {
-    border-radius: 2px;
-}
+.teaser__date {
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
 
-/*Active dropdown nav item */
-.main-nav ul li:hover > a {
-    background-color: #175E91;
-}
+.teaser__day {
+  color: #e51843;
+  font-size: 52px;
+  display: block;
+  font-weight: bold;
+  line-height: 1; }
 
-/* Selected Dropdown nav item */
-.main-nav ul li.selected > a {
-    background-color: #fff;
-    color: #175E91;
-}
+.teaser__monthyear {
+  display: block;
+  text-transform: uppercase; }
 
-/* Dropdown CSS */
-.main-nav ul li {position: relative;}
+.teaser__headline {
+  margin: 0 0 25px; }
 
-.main-nav ul li ul {
-    position: absolute;
-    background-color: #1F8DD6;
-    min-width: 100%;
-    text-align: left;
-    z-index: 999;
+.teaser__headline a {
+  color: black;
+  text-transform: uppercase;
+  font-size: 34px; }
 
-    display: none;
-}
-.main-nav ul li ul li {
-    display: block;
-}
-
-/* Dropdown CSS */
-.main-nav ul li ul ul {
-    left: 100%;
-    top: 0;
-}
-
-/* Active on Hover */
-.main-nav li:hover > ul {
-    display: block;
-}
-
-/* Child Indicator */
-.main-nav .has-children > a {
-    padding-right: 30px;
-}
-.main-nav .has-children > a:after {
-    font-family: FontAwesome;
-    content: '\f107';
-    position: absolute;
-    display: inline-block;
-    right: 8px;
-    top: 0;
-}
-
-.main-nav .has-children .has-children > a:after {
-    content: '\f105';
-}
+.teaser__summary {
+  font-size: 1.75rem; }

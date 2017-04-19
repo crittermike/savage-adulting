@@ -1,0 +1,36 @@
+.teaser {
+  padding: 75px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.teaser__date {
+  font-family: $font-headline;
+  text-align: center;
+}
+
+.teaser__day {
+  color: $color-primary;
+  font-size: 52px;
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.teaser__monthyear {
+  display: block;
+  text-transform: uppercase;
+}
+
+.teaser__headline {
+  margin: 0 0 25px;
+}
+
+.teaser__headline a {
+  color: black;
+  text-transform: uppercase;
+  font-size: 34px;
+}
+
+.teaser__summary {
+  font-size: 1.75rem;
+}

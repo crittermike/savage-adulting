@@ -1,0 +1,24 @@
+<div class="row teaser">
+    <div class="col-sm-2 col-sm-offset-1">
+        <time class="teaser__date" datetime="{{ post.date | date(site.date_long) }}">
+            <span class="teaser__day">
+                {{ post.date | date("d") }}
+            </span>
+            <span class="teaser__monthyear">
+                {{ post.date | date("M Y") }}
+            </span>
+        </time>
+    </div>
+
+    <div class="col-sm-8">
+        {% if post.header.link %}
+            <h3 class="teaser__headline"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url"><i class="fa fa-angle-double-right"></i></a> <a href="{{ post.header.link }}">{{ post.title }}</a></h3>
+        {% else %}
+            <h3 class="teaser__headline teaser__headline--link"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h3>
+        {% endif %}
+
+        <div class="teaser__summary">{{ post.summary }}</div>
+
+        {% for tag in post.taxonomy.tag %}<span class="label label-{{tag}}"><a href="{{ base_url_absolute }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></span>{%if not loop.last %} {% endif %}{% endfor %}
+    </div>
+</div>

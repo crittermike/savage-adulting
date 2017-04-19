@@ -1,0 +1,26 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% set tags = taxonomy.taxonomy['tag'] %}
+
+    <ul>
+        {% for tag, items in tags %}
+            <li><a href="#{{ tag }}">{{ tag }} <span>{{ items|length }}</span></a></li>
+        {% endfor %}
+    </ul>
+
+    {% for tag, items in tags %}
+        <article>
+            <h2 id="{{ tag }}">{{ tag | title }}</h2>
+            <ul>
+                {% for path, slug in items %}
+                    {% set post = grav['pages'].get(path) %}
+                    {% if post.title != null %}
+                        <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date(site.date_long) }}">{{ post.date | date("d M Y") }}</time></a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </article>
+    {% endfor %}
+
+{% endblock %}

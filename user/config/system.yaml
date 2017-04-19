@@ -4,7 +4,7 @@ home:
   alias: '/blog'
 
 pages:
-  theme: notepad
+  theme: savage
   markdown_extra: false
   process:
     markdown: true

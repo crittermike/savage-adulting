@@ -4,3 +4,4 @@ backup
 logs
 .idea
 images/*
+user/themes/savage/.sass-cache
