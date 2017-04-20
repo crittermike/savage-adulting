@@ -1,8 +1,8 @@
 .banner {
-  text-align: center;
   background: black;
   padding: 130px 0;
   margin-bottom: 50px;
+  text-align: center;
   h1 {
     background: $color-primary;
     text-transform: uppercase;
@@ -16,5 +16,57 @@
     text-transform: uppercase;
     font-size: 70px;
     font-weight: bold;
+  }
+  form {
+    text-align: left;
+    margin: 40px 0;
+  }
+  input,
+  textarea {
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    margin: 0 auto 40px;
+    border: 1px solid white;
+    outline: none;
+  }
+  label,
+  button {
+    color: white;
+    font-family: $font-headline;
+    text-transform: uppercase;
+  }
+  button {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid $color-primary;
+    background: black;
+    font-weight: bold;
+    font-size: 30px;
+    &:hover {
+      background: $color-primary;
+    }
+  }
+  .alert {
+    background: $color-primary;
+    color: white;
+    font-family: $font-headline;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .banner {
+    padding: 50px 0;
+    h2 {
+      font-size: 40px;
+    }
   }
 }

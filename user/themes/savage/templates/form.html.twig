@@ -1,6 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block banner %}
+  <h1>{{ site.title }}</h1>
+  <h2>{{ page.title }}</h2>
+  <div class="col-sm-6 col-sm-offset-3">
+    {% include "forms/form.html.twig" %}
+  </div>
+{% endblock %}
+
 {% block content %}
-  <div>{{ content }}</div>
-  {% include "forms/form.html.twig" %}
+  {{ content }}
 {% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block banner %}
+    <div class="col-xs-12">
+        <h1>{{ site.title }}</h1>
+        {% if query %}
+            {% set count = search_results ? search_results.count : 0 %}
+            {% if count == 1 %}
+                <h2>1 Result for {{ query }}</h2>
+            {% elseif count == 0 %}
+                <h2>No results for {{ query }}</h2>
+            {% else %}
+                <h2>{{ count }} Results for {{ query }}</h2>
+            {% endif %}
+        {% else %}
+            <h2>Search for something, genius</h2>
+        {% endif %}
+    </div>
+
+    <div class="col-sm-8 col-sm-offset-2">
+        {% include 'partials/simplesearch_searchbox.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div>{{ content }}</div>
+    {% for post in search_results %}
+        {% include 'partials/teaser.html.twig' %}
+    {% endfor %}
+{% endblock %}

@@ -1,5 +1,5 @@
 ---
-title: Yay! Another request!
+title: Yay! Another request! 🙄
 form:
     name: contact-form
     fields:
@@ -43,4 +43,3 @@ form:
 
 ---
 
-I can't wait to see what riveting topic you think I'm going to waste my time on.

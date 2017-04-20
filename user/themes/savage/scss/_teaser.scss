@@ -1,11 +1,19 @@
+.teasers {
+  margin-top: 50px;
+}
 .teaser {
   padding: 75px 0;
   border-bottom: 1px solid #eee;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .teaser__date {
   font-family: $font-headline;
   text-align: center;
+  display: block;
+  margin-bottom: 25px;
 }
 
 .teaser__day {
@@ -33,4 +41,25 @@
 
 .teaser__summary {
   font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.category {
+  border-bottom: 1px solid #eee;
+  margin: 50px;
+  .teaser__summary,
+  .label {
+    display: none;
+  }
+}
+.category__heading {
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    display: inline-block;
+    background: $color-primary;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 auto;
+  }
 }

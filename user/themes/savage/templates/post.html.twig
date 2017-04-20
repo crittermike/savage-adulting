@@ -1,5 +1,27 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-  {{ page.content }}
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="post__header">
+        <div class="post__title">
+          <h1>{{ page.title }}</h1>
+          <p>
+            By <strong>An Adult</strong> &#8212; in
+            {% for tag in page.taxonomy.tag %}
+              <span class="label"><a href="{{ base_url_absolute }}/tag:{{ tag }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a></span>
+            {% endfor %}
+            <strong><time datetime="{{ page.date | date(site.date_long) }}">{{ page.date | date("d M Y") }}</time></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="post__content">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
 {% endblock %}

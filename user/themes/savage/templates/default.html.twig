@@ -2,16 +2,20 @@
 {% set collection = page.collection() %}
 
 {% block banner %}
-    <h1>{{ site.title }}</h1>
-    <h2>{{ site.description }}</h2>
+    <div class="col-xs-12">
+        <h1>{{ site.title }}</h1>
+        <h2>{{ site.description }}</h2>
+    </div>
 {% endblock %}
 
 {% block content %}
     {{ page.content }}
 
-    {% for post in collection %}
-        {% include 'partials/teaser.html.twig' %}
-    {% endfor %}
+    <div class="teasers">
+        {% for post in collection %}
+            {% include 'partials/teaser.html.twig' %}
+        {% endfor %}
+    </div>
 
     {% if config.plugins.pagination.enabled and collection.params.pagination %}
         {% include 'partials/pagination.html.twig' with {'pagination':collection.params.pagination} %}

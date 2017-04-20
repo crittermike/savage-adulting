@@ -9,6 +9,8 @@ taxonomy:
 
 "But I don't want to budget! Sticking to a budget is such a chore! Entering all my transactions is so hard!" Yeah, that's a tough one. But you know what is even harder? Being hopelessly, desperately poor.
 
+===
+
 You think that's hard? Then try being hopelessly, desperately poor and then finding out your car transmission is shot. Or that your kid broke his arm and had an ER trip. Or that your roof is leaking.
 
 Here's the thing: you've already lost. You don't earn enough money to be able to just say "screw it, I'll buy whatever I want and it'll be fine." You absolute failure!
