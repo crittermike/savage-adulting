@@ -3,12 +3,6 @@ title: Budget now or retire never
 date: 04/14/2017 5:00pm
 taxonomy:
     tag: [money]
-summary:
-    - You need a freaking budget. Yes you do.
-    - Track your spending for a month.
-    - Notice that you spend more on everything than you thought.
-    - Sign up for YNAB and use it religiously.
-    - Automate your savings - "pay yourself first".
 ---
 >&quot;The cold harsh reality is that we have to balance the budget. &quot;
 ><small><cite title="Michael Bloomberg">Michael Freaking Bloomberg</cite></small>
