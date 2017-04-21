@@ -4,7 +4,13 @@
 <head>
 {% block head %}
     <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <title>
+        {% if page.collection.params.taxonomies %}
+            Tagged with "{{ page.collection.params.taxonomies.tag.0|capitalize }}" |
+        {% elseif header.title %}
+            {{ header.title|e('html') }} |
+        {% endif %}
+        {{ site.title|e('html') }}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +34,7 @@
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('jquery') %}
+        {% do assets.addJs('jquery', 101) %}
         {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js') %}
         {% do assets.addJs('theme://js/custom.js') %}
     {% endblock %}

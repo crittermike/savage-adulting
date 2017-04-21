@@ -14,7 +14,7 @@ content:
     pagination: true
 
 feed:
-    description: Sample Blog Description
+    description: Savage Adulting
     limit: 10
 
 pagination: true

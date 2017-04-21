@@ -19,6 +19,26 @@
   </div>
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
+
+      {% if header.summary %}
+        <div class="post__summarywrap">
+          <a class="post__summarytoggle collapsed" data-toggle="collapse" href="#post__summary" aria-expanded="false" aria-controls="post__summary">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            SPOILER ALERT
+          </a>
+          <div class="post__summary collapse" id="post__summary">
+            <p>If you're literally 9 and too lazy to read this post, then here's a summary.</p>
+            <ul>
+              {% for point in header.summary %}
+                <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+      {% endif %}
+
       <div class="post__content">
         {{ page.content }}
       </div>

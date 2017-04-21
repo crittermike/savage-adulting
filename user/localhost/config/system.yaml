@@ -1,0 +1,12 @@
+debugger:
+  enabled: true
+
+errors:
+  display: true
+
+cache:
+  enabled: false
+
+assets:
+  css_pipeline: false
+  js_pipeline: false

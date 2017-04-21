@@ -6,9 +6,9 @@
         {% if query %}
             {% set count = search_results ? search_results.count : 0 %}
             {% if count == 1 %}
-                <h2>1 Result for {{ query }}</h2>
+                <h2>1 Result for "{{ query }}"</h2>
             {% elseif count == 0 %}
-                <h2>No results for {{ query }}</h2>
+                <h2>No results for "{{ query }}"</h2>
             {% else %}
                 <h2>{{ count }} Results for {{ query }}</h2>
             {% endif %}

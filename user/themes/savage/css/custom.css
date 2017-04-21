@@ -24,7 +24,7 @@ span.label {
 
 .navbar__links {
   margin-right: 10px;
-  margin-top: 20px; }
+  margin-top: 15px; }
   .in .navbar__links, .collapsing .navbar__links {
     margin-top: 0; }
 
@@ -184,6 +184,46 @@ span.label {
     font-size: 70px;
     text-transform: uppercase; }
 
+.post__summarywrap {
+  margin-bottom: 50px; }
+
+.post__summarytoggle {
+  text-align: left;
+  color: black;
+  border: 1px solid #e51843;
+  border-bottom: 1px solid white;
+  padding: 15px 20px;
+  font-size: 35px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block; }
+  .post__summarytoggle .fa-plus {
+    display: none; }
+  .post__summarytoggle.collapsed {
+    border-bottom-color: #e51843; }
+    .post__summarytoggle.collapsed .fa-plus {
+      display: inline; }
+    .post__summarytoggle.collapsed .fa-minus {
+      display: none; }
+  .post__summarytoggle:hover, .post__summarytoggle:focus {
+    background: #e51843;
+    color: white;
+    text-decoration: none; }
+
+.post__summary {
+  border: 1px solid #e51843;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+  line-height: 1.8em;
+  position: relative;
+  top: -1px; }
+  .post__summary li {
+    margin: 0;
+    padding: 0; }
+  .post__summary ul {
+    padding-left: 25px; }
+
 .post__content {
   font-size: 130%;
   line-height: 1.8em; }
@@ -211,6 +251,6 @@ span.label {
     font-size: 40px; } }
 .footer {
   background: black;
-  text-align: center; 
+  text-align: center;
   padding: 50px;
   color: white; }
