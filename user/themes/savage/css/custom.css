@@ -184,9 +184,13 @@ span.label {
     font-size: 70px;
     text-transform: uppercase; }
 
+.embed-responsive {
+  margin-bottom: 30px; }
+
 .post__content {
   font-size: 130%;
-  line-height: 1.8em; }
+  line-height: 1.8em;
+  margin-bottom: 100px; }
   .post__content h1, .post__content h2, .post__content h3, .post__content h4, .post__content h5, .post__content h6 {
     text-transform: uppercase;
     margin: 60px 0 10px; }
