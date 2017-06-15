@@ -8,9 +8,9 @@
         {% if page.collection.params.taxonomies %}
             Tagged with "{{ page.collection.params.taxonomies.tag.0|capitalize }}" |
         {% elseif header.title %}
-            {{ header.title|e('html') }} |
+            {{ header.title }} |
         {% endif %}
-        {{ site.title|e('html') }}</title>
+        {{ site.title }}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
