@@ -24,6 +24,8 @@ class Themes extends Iterator
     /** @var Config */
     protected $config;
 
+    protected $inited = false;
+
     /**
      * Themes constructor.
      *
@@ -51,25 +53,29 @@ class Themes extends Iterator
 
     public function initTheme()
     {
-        /** @var Themes $themes */
-        $themes = $this->grav['themes'];
+        if ($this->inited === false) {
+            /** @var Themes $themes */
+            $themes = $this->grav['themes'];
 
-        try {
-            $instance = $themes->load();
-        } catch (\InvalidArgumentException $e) {
-            throw new \RuntimeException($this->current() . ' theme could not be found');
+            try {
+                $instance = $themes->load();
+            } catch (\InvalidArgumentException $e) {
+                throw new \RuntimeException($this->current() . ' theme could not be found');
+            }
+
+            if ($instance instanceof EventSubscriberInterface) {
+                /** @var EventDispatcher $events */
+                $events = $this->grav['events'];
+
+                $events->addSubscriber($instance);
+            }
+
+            $this->grav['theme'] = $instance;
+
+            $this->grav->fireEvent('onThemeInitialized');
+
+            $this->inited = true;
         }
-
-        if ($instance instanceof EventSubscriberInterface) {
-            /** @var EventDispatcher $events */
-            $events = $this->grav['events'];
-
-            $events->addSubscriber($instance);
-        }
-
-        $this->grav['theme'] = $instance;
-
-        $this->grav->fireEvent('onThemeInitialized');
     }
 
     /**
@@ -224,10 +230,14 @@ class Themes extends Iterator
         $locator = $this->grav['locator'];
 
         $registered = stream_get_wrappers();
-        $schemes = $config->get(
-            "themes.{$name}.streams.schemes",
-            ['theme' => ['paths' => $locator->findResources("themes://{$name}", false)]]
-        );
+
+        $schemes = $config->get("themes.{$name}.streams.schemes", []);
+        $schemes += [
+            'theme' => [
+                'type' => 'ReadOnlyStream',
+                'paths' => $locator->findResources("themes://{$name}", false)
+            ]
+        ];
 
         foreach ($schemes as $scheme => $config) {
             if (isset($config['paths'])) {
